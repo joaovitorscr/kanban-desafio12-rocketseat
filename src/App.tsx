@@ -1,3 +1,5 @@
+import Card from './components/Card'
+
 function App() {
   return (
     <div className="container">
@@ -43,57 +45,30 @@ function App() {
           <section className="grid grid-cols-3 gap-12 mt-8">
             <div>
               <h2 className="font-bold text-xl">A fazer</h2>
-              <div className="flex flex-col gap-2 rounded-lg shadow-cardShadow p-6 mt-6">
-                <h3>#boraCodar um Kanban 🧑‍💻</h3>
-                <p>
-                  Novo desafio do #boraCodar da Rocketseat, onde é proposto
-                  construir um quadro de Kanban.
-                </p>
-                <div>
-                  <span className="px-2 py-1 bg-[#e2d6ff] rounded-lg mr-2">
-                    rocketseat
-                  </span>
-                  <span className="px-2 py-1 bg-[#e2d6ff] rounded-lg">
-                    desafio
-                  </span>
-                </div>
-              </div>
+              <Card
+                title="#boraCodar um Kanban 🧑‍💻"
+                description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
+        quadro de Kanban."
+                tags={['rocketseat', 'desafio']}
+              />
             </div>
             <div>
               <h2 className="font-bold text-xl">Fazendo</h2>
-              <div className="flex flex-col gap-2 rounded-lg shadow-cardShadow p-6 mt-6">
-                <h3>#boraCodar um Kanban 🧑‍💻</h3>
-                <p>
-                  Novo desafio do #boraCodar da Rocketseat, onde é proposto
-                  construir um quadro de Kanban.
-                </p>
-                <div>
-                  <span className="px-2 py-1 bg-[#e2d6ff] rounded-lg mr-2">
-                    rocketseat
-                  </span>
-                  <span className="px-2 py-1 bg-[#e2d6ff] rounded-lg">
-                    desafio
-                  </span>
-                </div>
-              </div>
+              <Card
+                title="#boraCodar um Kanban 🧑‍💻"
+                description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
+        quadro de Kanban."
+                tags={['rocketseat', 'desafio']}
+              />
             </div>
             <div>
               <h2 className="font-bold text-xl">Feito</h2>
-              <div className="flex flex-col gap-2 rounded-lg shadow-cardShadow p-6 mt-6">
-                <h3>#boraCodar um Kanban 🧑‍💻</h3>
-                <p>
-                  Novo desafio do #boraCodar da Rocketseat, onde é proposto
-                  construir um quadro de Kanban.
-                </p>
-                <div>
-                  <span className="px-2 py-1 bg-[#e2d6ff] rounded-lg mr-2">
-                    rocketseat
-                  </span>
-                  <span className="px-2 py-1 bg-[#e2d6ff] rounded-lg">
-                    desafio
-                  </span>
-                </div>
-              </div>
+              <Card
+                title="#boraCodar um Kanban 🧑‍💻"
+                description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
+        quadro de Kanban."
+                tags={['rocketseat', 'desafio']}
+              />
             </div>
           </section>
         </main>
