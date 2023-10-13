@@ -9,4 +9,16 @@
     padding: 0;
     font-family: 'Inter', sans-serif;
   }
+
+  body {
+    background-color: #7c3aed;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
