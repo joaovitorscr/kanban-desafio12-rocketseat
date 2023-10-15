@@ -5,7 +5,7 @@ function App() {
     <div className="container">
       <div className="mx-8 flex">
         <aside className="w-44">
-          <div>
+          <div className="mt-8 mb-16">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
@@ -23,28 +23,82 @@ function App() {
           </div>
           <nav className="mr-12">
             <ul>
-              <li>Boards</li>
-              <li>Equipes</li>
-              <li>Relatórios</li>
-              <li>Ajustes</li>
+              <li className="cursor-pointer flex items-center font-bold">
+                <img
+                  className="w-5 h-5 mr-4"
+                  src="/images/tablet-portrait.png"
+                  alt=""
+                />
+                Boards
+              </li>
+              <li className="cursor-pointer mt-8 flex items-center">
+                <img className="w-5 h-5 mr-4" src="/images/people.png" alt="" />
+                Equipes
+              </li>
+              <li className="cursor-pointer mt-8 flex items-center">
+                <img
+                  className="w-5 h-5 mr-4"
+                  src="/images/document-text.png"
+                  alt=""
+                />
+                Relatórios
+              </li>
+              <li className="cursor-pointer mt-8 flex items-center">
+                <img className="w-5 h-5 mr-4" src="/images/cog.png" alt="" />
+                Ajustes
+              </li>
             </ul>
           </nav>
         </aside>
-        <main className="bg-white text-black rounded-[32px] p-14 w-screen h-screen flex flex-col">
-          <h1 className="font-bold text-4xl">Meu Kanban</h1>
+        <main className="bg-white text-black rounded-[32px] min-h-screen p-14 mt-1 flex flex-col">
+          <div className="flex justify-between">
+            <h1 className="font-bold text-4xl flex items-center">
+              Meu Kanban
+              <img
+                className="w-6 h-6 ml-3 cursor-pointer"
+                src="/images/edit.png"
+                alt="Editar"
+              />
+            </h1>
+            <img
+              className="w-16 h-16"
+              src="/images/profile-picture-1.png"
+              alt=""
+            />
+          </div>
           <div className="flex mt-11">
-            <button className="mr-4 bg-purple py-3 px-8 text-white rounded-md">
+            <button className="flex mr-4 bg-purple py-3 px-8 text-white rounded-md">
+              <img className="w-6 h-6 mr-2" src="/images/filter.png" alt="" />
               Filtrar
             </button>
-            <input
-              className="w-full border-[#E3E3E3] border-2 rounded-lg px-6 py-3"
-              placeholder="Busque por cards, assuntos ou responsáveis..."
-              type="text"
-            />
+            <div className="w-full relative">
+              <img
+                className="absolute h-6 w-6 mx-6 my-3"
+                src="/images/search.png"
+                alt=""
+              />
+              <input
+                className="w-full border-[#E3E3E3] border-2 rounded-lg pr-3 pl-14 py-3"
+                placeholder="Busque por cards, assuntos ou responsáveis..."
+                type="text"
+              />
+            </div>
           </div>
           <section className="grid grid-cols-3 gap-12 mt-8">
             <div>
               <h2 className="font-bold text-xl">A fazer</h2>
+              <Card
+                title="#boraCodar um Kanban 🧑‍💻"
+                description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
+        quadro de Kanban."
+                tags={['rocketseat', 'desafio']}
+              />
+              <Card
+                title="#boraCodar um Kanban 🧑‍💻"
+                description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
+        quadro de Kanban."
+                tags={['rocketseat', 'desafio']}
+              />
               <Card
                 title="#boraCodar um Kanban 🧑‍💻"
                 description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
@@ -60,9 +114,27 @@ function App() {
         quadro de Kanban."
                 tags={['rocketseat', 'desafio']}
               />
+              <Card
+                title="#boraCodar um Kanban 🧑‍💻"
+                description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
+        quadro de Kanban."
+                tags={['rocketseat', 'desafio']}
+              />
             </div>
             <div>
               <h2 className="font-bold text-xl">Feito</h2>
+              <Card
+                title="#boraCodar um Kanban 🧑‍💻"
+                description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
+        quadro de Kanban."
+                tags={['rocketseat', 'desafio']}
+              />
+              <Card
+                title="#boraCodar um Kanban 🧑‍💻"
+                description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um
+        quadro de Kanban."
+                tags={['rocketseat', 'desafio']}
+              />
               <Card
                 title="#boraCodar um Kanban 🧑‍💻"
                 description="Novo desafio do #boraCodar da Rocketseat, onde é proposto construir um

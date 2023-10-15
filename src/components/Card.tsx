@@ -9,7 +9,7 @@ type Props = {
 export default function Card({ title, description, tags }: Props) {
   return (
     <div className="flex flex-col gap-2 rounded-lg shadow-cardShadow p-6 mt-6">
-      <h3>{title}</h3>
+      <h3 className="font-bold">{title}</h3>
       <p>{description}</p>
       <div>
         {tags.map((item) => (
