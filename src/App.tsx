@@ -1,6 +1,14 @@
+import { useState } from 'react'
 import Card from './components/Card'
 
 function App() {
+  const [kanbanName, setKanbanName] = useState('Meu Kanban')
+  const [editing, setEditing] = useState(false)
+
+  function handleEdit() {
+    setEditing(true)
+  }
+
   return (
     <div className="container">
       <div className="mx-8 flex">
@@ -52,14 +60,25 @@ function App() {
         </aside>
         <main className="bg-white text-black rounded-[32px] min-h-screen p-14 mt-1 flex flex-col">
           <div className="flex justify-between">
-            <h1 className="font-bold text-4xl flex items-center">
-              Meu Kanban
-              <img
-                className="w-6 h-6 ml-3 cursor-pointer"
-                src="/images/edit.png"
-                alt="Editar"
-              />
-            </h1>
+            <div className="flex items-center">
+              {editing ? (
+                <textarea
+                  onChange={(e) => setKanbanName(e.target.value)}
+                  className="resize-none outline-none font-bold text-4xl mr-3 p-2 h-fit border-2 rounded-md border-black"
+                >
+                  {kanbanName}
+                </textarea>
+              ) : (
+                <h1 className="font-bold text-4xl mr-3">{kanbanName}</h1>
+              )}
+              <button type="button" onClick={() => setEditing(!editing)}>
+                <img
+                  className="w-6 h-6 cursor-pointer"
+                  src="/images/edit.png"
+                  alt="Editar"
+                />
+              </button>
+            </div>
             <img
               className="w-16 h-16"
               src="/images/profile-picture-1.png"
