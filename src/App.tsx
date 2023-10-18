@@ -5,10 +5,6 @@ function App() {
   const [kanbanName, setKanbanName] = useState('Meu Kanban')
   const [editing, setEditing] = useState(false)
 
-  function handleEdit() {
-    setEditing(true)
-  }
-
   return (
     <div className="container">
       <div className="mx-8 flex">
